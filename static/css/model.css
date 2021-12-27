@@ -29,13 +29,13 @@ input:focus {
     border: solid 5px #00FFCE;
 }
 
-#mulai {
+#lanjut {
     background-color: PaleVioletRed;
     border:  none;
     width:  200px;
     color: white;
 }
 
-#mulai:hover {
+#lanjut:hover {
     background-color: MediumVioletRed;
 }
