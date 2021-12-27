@@ -10,7 +10,7 @@ def index():
 	return render_template("index.html")
 
 @app.route("/mulai", methods=['POST', 'GET'])
-def truth():
+def truthordare():
 	t = {'Kalau kamu bisa jadi tidak terlihat, apa hal pertama yang akan kamu lakukan?':1, 
         'Apa rahasia yang kamu sembunyikan dari orangtuamu?':2,
         'Siapa orang yang diam-diam kamu sukai?' :3,
@@ -64,3 +64,10 @@ def truth():
 	if (request.form['name_input']=="dare"):
 		flash(dare)
 		return render_template("index.html")
+		
+
+@app.route("/lanjut", methods=['POST', 'GET'])
+def hukuman():
+	if (request.form['name_input']=="truth"):
+		flash("Hukumannya adalah")
+		return render_template("indexx.html")
