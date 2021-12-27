@@ -68,6 +68,6 @@ def truthordare():
 
 @app.route("/lanjut", methods=['POST', 'GET'])
 def hukuman():
-	if (request.form['name_input']=="truth"):
+	if (request.form['name_input']=="hukuman"):
 		flash("Hukumannya adalah")
 		return render_template("indexx.html")
