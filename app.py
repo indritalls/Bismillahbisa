@@ -9,6 +9,10 @@ def index():
 	flash("Ketikkan truth atau dare")
 	return render_template("index.html")
 
+def indexx():
+	flash("Hukuman kamu adalah")
+	return render_template("indexx.html")
+
 @app.route("/mulai", methods=['POST', 'GET'])
 def truthordare():
 	t = {'Kalau kamu bisa jadi tidak terlihat, apa hal pertama yang akan kamu lakukan?':1, 
