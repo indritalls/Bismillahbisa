@@ -61,6 +61,19 @@ def truthordare():
         }
 	dare = random.choice(list(d.keys()))
 
+	h = {'Push up 20 kali sambil nyanyi lagu Bagimu Negeri':1, 
+        'Sit up 30 kali':2,
+        'Teriak Aku sayang dia sekarang' :3,
+        'Beliin teman kamu permen':4,
+        'Gendong salah satu temanmu':5,
+        'Lompat-lompat selama 2 menit':6,
+        'Ngerap selama 2 menit': 7,
+        'Nyanyikan sebuah lagu anak-anak':8,
+        'Bertingkahlah seperti Hotman Paris selama 2 menit!':9,
+        'Kayang selama 30 detik':10,
+        }
+	hukuman = random.choice(list(d.keys()))
+
 	if (request.form['name_input']=="truth"):
 		flash(tth)
 		return render_template("index.html")
@@ -69,7 +82,6 @@ def truthordare():
 		flash(dare)
 		return render_template("index.html")
 		
-		
 	if (request.form['name_input']=="hukuman"):
-		flash("Hukumannya adalah")
+		flash(hukuman)
 		return render_template("indexx.html")
