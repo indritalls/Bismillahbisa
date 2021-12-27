@@ -2,9 +2,9 @@ from flask import Flask, render_template, request, flash
 import random
 
 app = Flask(__name__)
-app.secret_key = "manbearpig_MUDMAN888"
+app.secret_key = "tubes45-01_BENGPRO"
 
-@app.route("/hello")
+@app.route("/line")
 def index():
 	flash("Ketikkan truth atau dare")
 	return render_template("index.html")
@@ -72,7 +72,7 @@ def truthordare():
         'Bertingkahlah seperti Hotman Paris selama 2 menit!':9,
         'Kayang selama 30 detik':10,
         }
-	hukuman = random.choice(list(d.keys()))
+	hukuman = random.choice(list(h.keys()))
 
 	if (request.form['name_input']=="truth"):
 		flash(tth)
