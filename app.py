@@ -65,9 +65,7 @@ def truthordare():
 		flash(dare)
 		return render_template("index.html")
 		
-
-@app.route("/lanjut", methods=['POST', 'GET'])
-def hukuman():
+		
 	if (request.form['name_input']=="hukuman"):
 		flash("Hukumannya adalah")
 		return render_template("indexx.html")
