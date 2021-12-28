@@ -107,3 +107,7 @@ def truthordare():
 	if (request.form['name_input']=="lanjut"):
 		flash("Ketikkan truth atau dare")
 		return render_template("index.html")
+	
+	if (request.form['name_input']=="selesai"):
+		flash("")
+		return render_template("indexxxx.html")
