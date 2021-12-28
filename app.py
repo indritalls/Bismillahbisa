@@ -75,7 +75,11 @@ hukuman = random.choice(list(h.keys()))
 @app.route("/mulai", methods=['POST', 'GET'])
 def truthordare():
 	if (request.form['name_input']=="truth"):
-		flash("Jawab jujur ya...."+ "\n"+ tth + "\n" + "Apakah bisa menjawabnya? Ketik 'bisa' jika memang bisa dan ketik 'gabisa' jika tidak mampu melakukannya")
+		flash("Jawab jujur ya....")
+		flash("\n")
+		flash(tth)
+		flash("\n") 
+		flash("Apakah bisa menjawabnya? Ketik 'bisa' jika memang bisa dan ketik 'gabisa' jika tidak mampu melakukannya")
 		return render_template("index.html")
 
 	if (request.form['name_input']=="dare"):
