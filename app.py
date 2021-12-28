@@ -77,11 +77,13 @@ def truthordare():
 	if (request.form['name_input']=="truth"):
 		flash("Jawab jujur ya...."+ tth)
 		flash("\n") 
-		flash("Apakah bisa menjawabnya? Ketik 'bisa' jika memang bisa dan ketik 'gabisa' jika tidak mampu melakukannya")
+		flash("Apakah bisa menjawabnya? Ketik 'bisa' jika bisa menjawab dan ketik 'gabisa' jika tidak mampu melakukannya")
 		return render_template("index.html")
 
 	if (request.form['name_input']=="dare"):
-		flash("Lakuin tantangannya dengan baik ya...." + "\n" + dare + "\n" + "Apakah bisa menjawabnya? Ketik 'bisa' jika memang bisa dan ketik 'gabisa' jika tidak mampu melakukannya")
+		flash("Lakukan tantangannya dengan benar ya...."+ dare)
+		flash("\n") 
+		flash("Apakah bisa melakukannya? Ketik 'bisa' jika mampu melakukannya dan ketik 'gabisa' jika tidak mampu melakukannya")
 		return render_template("index.html")
 		
 	if (request.form['name_input']=="gabisa"):
