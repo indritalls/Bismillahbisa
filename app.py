@@ -111,3 +111,7 @@ def truthordare():
 	if (request.form['name_input']=="selesai"):
 		flash("")
 		return render_template("indexxxx.html")
+	
+	if (request.form['name_input']!="selesai" or "lanjut" or "truth" or "dare" or "gabisa" or "bisa"):
+		flash("Oops maaf, keyword yang kamu masukkan salah. Pastikan huruf yang kalian gunakan adalah huruf biasa tanpa huruf kapital")
+		return render_template("index.html")
