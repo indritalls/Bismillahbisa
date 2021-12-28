@@ -13,9 +13,7 @@ def indexx():
 	flash("Hukuman kamu adalah")
 	return render_template("indexx.html")
 
-@app.route("/mulai", methods=['POST', 'GET'])
-def truthordare():
-	t = {'Kalau kamu bisa jadi tidak terlihat, apa hal pertama yang akan kamu lakukan?':1, 
+t = {'Kalau kamu bisa jadi tidak terlihat, apa hal pertama yang akan kamu lakukan?':1, 
         'Apa rahasia yang kamu sembunyikan dari orangtuamu?':2,
         'Siapa orang yang diam-diam kamu sukai?' :3,
         'Siapa orang terakhir yang kamu kepoin di media sosial?':4,
@@ -36,9 +34,9 @@ def truthordare():
         'Apa aib yang kamu sembunyikan dari teman-temanmu?':19,
         'Berapa jumlah mantanmu? sebutkan!':20,
         }
-	tth = random.choice(list(t.keys()))
+tth = random.choice(list(t.keys()))
 	
-	d = {'Lakukan rap gaya bebas selama 3 menit!':1, 
+d = {'Lakukan rap gaya bebas selama 3 menit!':1, 
         'Biarkan orang lain membuat status menggunakan akun sosial mediamu!':2,
         'Berikan ponselmu kepada salah satu di antara kita dan biarkan orang tersebut mengirim satu pesan kepada siapapun yang dia mau!' :3,
         'Cium salah satu kaus kaki di antara temanmu!':4,
@@ -59,9 +57,9 @@ def truthordare():
         'Tunjukkan gerakan dance terbaikmu!':19,
         'Parodikan adegan di film India kesukaanmu!':20,
         }
-	dare = random.choice(list(d.keys()))
+dare = random.choice(list(d.keys()))
 
-	h = {'Push up 20 kali sambil nyanyi lagu Bagimu Negeri':1, 
+h = {'Push up 20 kali sambil nyanyi lagu Bagimu Negeri':1, 
         'Sit up 30 kali':2,
         'Teriak Aku sayang dia sekarang' :3,
         'Beliin teman kamu permen':4,
@@ -72,8 +70,10 @@ def truthordare():
         'Bertingkahlah seperti Hotman Paris selama 2 menit!':9,
         'Kayang selama 30 detik':10,
         }
-	hukuman = random.choice(list(h.keys()))
+hukuman = random.choice(list(h.keys()))
 
+@app.route("/mulai", methods=['POST', 'GET'])
+def truthordare():
 	if (request.form['name_input']=="truth"):
 		flash("Jawab jujur ya...."+ "\n"+ tth + "\n" + "Apakah bisa menjawabnya? Ketik 'bisa' jika memang bisa dan ketik 'gabisa' jika tidak mampu melakukannya")
 		return render_template("index.html")
@@ -85,3 +85,17 @@ def truthordare():
 	if (request.form['name_input']=="gabisa"):
 		flash(hukuman)
 		return render_template("indexx.html")
+
+@app.route("/lanjut", methods=['POST', 'GET'])
+def hukuman():
+        if (request.form['name_input']=="truth"):
+                flash("Jawab jujur ya...."+ "\n"+ tth + "\n" + "Apakah bisa menjawabnya? Ketik 'bisa' jika memang bisa dan ketik 'gabisa' jika tidak mampu melakukannya")
+                return render_template("index.html")
+        
+        if (request.form['name_input']=="dare"):
+                flash("Lakuin tantangannya dengan baik ya...." + "\n" + dare + "\n" + "Apakah bisa menjawabnya? Ketik 'bisa' jika memang bisa dan ketik 'gabisa' jika tidak mampu melakukannya")
+                return render_template("index.html")
+        
+        if (request.form['name_input']=="gabisa"):
+                flash(hukuman)
+                return render_template("indexx.html")
