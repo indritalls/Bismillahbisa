@@ -96,6 +96,3 @@ def hukuman():
                 flash("Lakuin tantangannya dengan baik ya...." + "\n" + dare + "\n" + "Apakah bisa menjawabnya? Ketik 'bisa' jika memang bisa dan ketik 'gabisa' jika tidak mampu melakukannya")
                 return render_template("index.html")
         
-        if (request.form['name_input']=="gabisa"):
-                flash(hukuman)
-                return render_template("indexx.html")
