@@ -89,4 +89,7 @@ def truthordare():
 	if (request.form['name_input']=="gabisa"):
 		flash(hukuman)
 		return render_template("indexx.html")
-
+	
+	if (request.form['Kembali ke home']):
+		flash('Terimakasih')
+		return render_template("index.html")
