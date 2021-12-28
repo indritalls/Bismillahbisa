@@ -95,5 +95,7 @@ def truthordare():
 		return render_template("indexx.html")
 	
 	if (request.form['name_input']=="bisa"):
-		flash('Wahh hebat lho kamu bisa menjawab pertanyaannya!!')
+		flash("Wahh hebat lho kamu bisa menjawab pertanyaannya!!")
+		flash("\n")
+		flash("Untuk melanjutkan games ini ke temanmu, silahkan ketik 'lanjut' dan jika keluar dari games ketik 'selesai'")
 		return render_template("indexxx.html")
