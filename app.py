@@ -76,7 +76,6 @@ hukuman = random.choice(list(h.keys()))
 def truthordare():
 	if (request.form['name_input']=="truth"):
 		flash("Jawab jujur ya....")
-		flash("\n")
 		flash(tth)
 		flash("\n") 
 		flash("Apakah bisa menjawabnya? Ketik 'bisa' jika memang bisa dan ketik 'gabisa' jika tidak mampu melakukannya")
