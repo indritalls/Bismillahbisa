@@ -13,6 +13,10 @@ def indexx():
 	flash("Hukuman kamu adalah")
 	return render_template("indexx.html")
 
+def indexxx():
+	flash("Keren banget!!")
+	return render_template("indexxx.html")
+
 t = {'Kalau kamu bisa jadi tidak terlihat, apa hal pertama yang akan kamu lakukan?':1, 
         'Apa rahasia yang kamu sembunyikan dari orangtuamu?':2,
         'Siapa orang yang diam-diam kamu sukai?' :3,
@@ -90,6 +94,6 @@ def truthordare():
 		flash(hukuman)
 		return render_template("indexx.html")
 	
-	if (request.form['Kembali ke home']):
-		flash('Terimakasih')
-		return render_template("index.html")
+	if (request.form['name_input']=="bisa"):
+		flash('Wahh hebat lho kamu bisa menjawab pertanyaannya!!')
+		return render_template("indexxx.html")
