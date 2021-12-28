@@ -92,6 +92,8 @@ def truthordare():
 		
 	if (request.form['name_input']=="gabisa"):
 		flash(hukuman)
+		flash("\n")
+		flash("Semangat ngejalanin hukumannya!! Untuk melanjutkan games ini ke temanmu, silahkan ketik 'lanjut' dan jika keluar dari games ketik 'selesai'")
 		return render_template("indexx.html")
 	
 	if (request.form['name_input']=="bisa"):
@@ -99,3 +101,6 @@ def truthordare():
 		flash("\n")
 		flash("Untuk melanjutkan games ini ke temanmu, silahkan ketik 'lanjut' dan jika keluar dari games ketik 'selesai'")
 		return render_template("indexxx.html")
+	
+	if (request.form['name_input']=="lanjut"):
+		index()
