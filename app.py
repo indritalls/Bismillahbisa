@@ -8,7 +8,6 @@ app.secret_key = "tubes45-01_BENGPRO"
 def index():
 	flash("Untuk peraturannya, kalian akan diberi pilihan ingin memilih truth atau dare. Jika kalian bisa menjawab atau melakukan tantangan yang diberikan, ketikkam 'bisa' maka games akan dilanjutkan ke pemain berikutnya. Namun jika tidak bisa menjawab ataupun menerima tantangan, ketikkan 'gabisa' maka kalian akan menerima hukuman. Untuk melanjutkan games ketik 'lanjut' dan untuk menghentikan games ketik 'berhenti'")
 	flash ("\n")
-	flash ("\n")
 	flash("Ketikkan truth atau dare")
 	return render_template("index.html")
 
