@@ -75,13 +75,13 @@ def truthordare():
 	hukuman = random.choice(list(h.keys()))
 
 	if (request.form['name_input']=="truth"):
-		flash(tth)
+		flash("Jawab jujur ya....", tth, "/n", "Apakah bisa menjawabnya? Ketik 'bisa' jika memang bisa dan ketik 'gabisa' jika tidak mampu melakukannya")
 		return render_template("index.html")
 
 	if (request.form['name_input']=="dare"):
-		flash(dare)
+		flash("Lakuin tantangannya dengan baik ya....", dare, "/n", "Apakah bisa menjawabnya? Ketik 'bisa' jika memang bisa dan ketik 'gabisa' jika tidak mampu melakukannya")
 		return render_template("index.html")
 		
-	if (request.form['name_input']=="hukuman"):
+	if (request.form['name_input']=="gabisa"):
 		flash(hukuman)
 		return render_template("indexx.html")
