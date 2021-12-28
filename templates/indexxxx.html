@@ -3,19 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Games Truth or Dare</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/gaya.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/terakhir.css') }}">
 </head>
 <body>
-    <img src="https://i.pinimg.com/564x/b9/1c/d4/b91cd46867d276c051cdaa93ba59f0ca.jpg">
+    <img src="https://i.pinimg.com/564x/5b/76/dd/5b76dd44e762106755b0c17746816622.jpg">
     <br>
-    <form action="mulai" method="post">
-        {% for message in get_flashed_messages() %}
-             <p>{{ message }}</p>
-         {% endfor %}
-        <br>
-        <input type="text" name="name_input">
-        <br>
-        <input type="submit" value="MULAI" id="mulai">
-    </form>
 </body>
 </html>
