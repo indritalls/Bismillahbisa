@@ -6,17 +6,13 @@ app.secret_key = "tubes45-01_BENGPRO"
 
 @app.route("/line")
 def index():
-	flash("Untuk peraturannya, kalian akan diberi pilihan ingin memilih truth atau dare. Jika kalian bisa menjawab atau melakukan tantangan yang diberikan, ketikkam 'bisa' maka games akan dilanjutkan ke pemain berikutnya. Namun jika tidak bisa menjawab ataupun menerima tantangan, ketikkan 'gabisa' maka kalian akan menerima hukuman. Untuk melanjutkan games ketik 'lanjut' dan untuk menghentikan games ketik 'berhenti'")
-	flash ("\n")
 	flash("Ketikkan truth atau dare")
 	return render_template("index.html")
 
 def indexx():
-	flash("Hukuman kamu adalah")
 	return render_template("indexx.html")
 
 def indexxx():
-	flash("Keren banget!!")
 	return render_template("indexxx.html")
 
 t = {'Kalau kamu bisa jadi tidak terlihat, apa hal pertama yang akan kamu lakukan?':1, 
